@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Blackjack Casino</h1>
+
+      <div class="game-area">
+        <div class="deck"></div>
+
+        <div class="dealer-area">
+          <h2><i class="fas fa-user-tie"></i> Dealer</h2>
+          <div id="dealer-cards" class="cards"></div>
+          <div id="dealer-score" class="score">Total: 0</div>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="player-area">
+          <h2><i class="fas fa-user"></i> Player</h2>
+          <div id="player-cards" class="cards"></div>
+          <div id="player-score" class="score">Total: 0</div>
+        </div>
+
+        <div class="chips-container">
+          <div class="chip chip-10" data-value="10">10</div>
+          <div class="chip chip-25" data-value="25">25</div>
+          <div class="chip chip-50" data-value="50">50</div>
+          <div class="chip chip-100" data-value="100">100</div>
+        </div>
+
+        <div class="controls">
+          <button id="deal-btn"><i class="fas fa-play"></i> Deal</button>
+          <button id="hit-btn" disabled>
+            <i class="fas fa-plus"></i> Hit
+          </button>
+          <button id="stand-btn" disabled>
+            <i class="fas fa-hand"></i> Stand
+          </button>
+          <div class="bet-controls">
+            <input
+              type="number"
+              id="bet-amount"
+              min="10"
+              value="100"
+              step="10"
+            />
+            <div class="balance-display">
+              <i class="fas fa-coins"></i> Balance:
+              <span id="balance">1000</span>
+            </div>
+          </div>
+
+          <button id="reset-bet-btn" class="reset-bet">Reset Bet</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
